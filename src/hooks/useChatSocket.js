@@ -41,7 +41,7 @@ export default function useChatSocket(onMessage) {
             }
 
         } else {
-            const socket = new SockJS('http://192.168.88.39:8080/ws');
+            const socket = new SockJS('http://localhost:8080/ws');
             const client = Stomp.over(socket);
             globalClient = client;
 

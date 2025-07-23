@@ -14,7 +14,7 @@ export default function ChatWindow({ chat }) {
     useEffect(() => {
         if (!chat?.chatId) return;
 
-        fetch('http://192.168.88.39:8080/api/getMessages', {
+        fetch('http://localhost:8080/api/getMessages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ export default function Home() {
     const [selectedChat, setSelectedChat] = useState(null);
 
     useEffect(() => {
-        axios.get('http://192.168.88.39:8080/api/getChats', {
+        axios.get('http://localhost:8080/api/getChats', {
             headers: {
                 Authorization: `Bearer ${getToken()}`,
             },

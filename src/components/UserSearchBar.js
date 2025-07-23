@@ -8,7 +8,7 @@ export default function UserSearchBar({ onChatCreated }) {
     const [error, setError] = useState('');
 
     const searchUser = () => {
-        axios.post('http://192.168.88.39:8080/api/findUserByUsername', { username }, {
+        axios.post('http://localhost:8080/api/findUserByUsername', { username }, {
             headers: {
                 Authorization: `Bearer ${getToken()}`
             }
@@ -25,7 +25,7 @@ export default function UserSearchBar({ onChatCreated }) {
 
     const createChat = () => {
         const currentUser = JSON.parse(atob(getToken().split('.')[1])).sub;
-        axios.post('http://192.168.88.39:8080/api/createNewChat', {
+        axios.post('http://localhost:8080/api/createNewChat', {
             user1: currentUser,
             user2: foundUser.username
         }, {
